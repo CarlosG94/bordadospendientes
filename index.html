@@ -31,6 +31,7 @@
           <th>Cantidad</th>
           <th>Logo Enfrente</th>
           <th>Logo Atrás</th>
+          <th>¿Listo para bordar?</th>
 
       <tbody id="data">
       </tbody>
@@ -53,7 +54,8 @@
                                       temp += "<td>"+u.producto+"</td>";
                                       temp += "<td>"+u.cantidad+"</td>";
                                       temp += "<td>"+u.logoEnfrente+"</td>";
-                                      temp += "<td>"+u.logoAtras+"</td></tr>";
+                                      temp += "<td>"+u.logoAtras+"</td>";
+                                      temp += "<td><img src="+u.pagado+" width='50'></td></tr>";
                                     })
                                     console.log(temp)
                                     document.getElementById("data").innerHTML = temp;
