@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://rawgit.com/wenzhixin/bootstrap-table/master/dist/bootstrap-table.min.css">
+<script src="https://rawgit.com/wenzhixin/bootstrap-table/master/dist/bootstrap-table.min.js"></script>
+ 
+</head>
+
+<body>
+  <header>
+
+     <div class="jumbotron">
+      <div class="container">
+        <h3>Bordados Pendientes – Wear It</h3>
+      </div> 
+    </div> 
+  </header>
+
+  <div class="container">
+    <table class="table table-stripped">
+      <thread>
+        <tr>
+          <th>Cliente</th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+
+      <tbody id="data">
+      </tbody>
+    </table>
+
+      <script>
+          fetch("https://v2-api.sheety.co/5199d81fd8781668c034a77a4b820330/wearItErp/bordadosPendientes").then(
+                    res=>{
+                        res.json().then(
+                              data=>{
+                                  console.log(data);
+                                  console.log(data['bordadosPendientes']);
+                                  console.log(typeof(data));
+                                  if(data['bordadosPendientes'].length > 0) {
+                                    var temp = "";
+                                    data['bordadosPendientes'].forEach((u)=>{
+                                      console.log(u);
+                                      temp += "<tr>";
+                                      temp += "<td>"+u.cliente+"</td>";
+                                      temp += "<td>"+u.producto+"</td>";
+                                      temp += "<td>"+u.cantidad+"</td></tr>";
+                                    })
+                                    console.log(temp)
+                                    document.getElementById("data").innerHTML = temp;
+                                  }
+                              }
+                          )
+                      }
+                  )
+
+  
+
+  </script>
+    
+  </div>
