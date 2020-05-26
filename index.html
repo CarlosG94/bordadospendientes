@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Test</title>
+  <title>WEAR IT – Bordados Pendientes</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>  
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://rawgit.com/wenzhixin/bootstrap-table/master/dist/bootstrap-table.min.css">
 <script src="https://rawgit.com/wenzhixin/bootstrap-table/master/dist/bootstrap-table.min.js"></script>
+<link rel="shortcut icon" href="cdn.shopify.com/s/files/1/2956/5414/files/Ola_32x32.jpg?v=1540991819" type="image/png">
  
 </head>
 
@@ -15,7 +16,8 @@
 
      <div class="jumbotron">
       <div class="container">
-        <h3>Bordados Pendientes – Wear It</h3>
+        <h3>Bordados Pendientes – @weartitofficial_</h3>
+        <img src="https://cdn.shopify.com/s/files/1/2956/5414/files/16c6991e5fe5f1999ff6c35af3f44424_ad091455-6e57-4009-8d95-cbb35d2ef76a_135x.png?v=1586562767">
       </div> 
     </div> 
   </header>
@@ -27,6 +29,8 @@
           <th>Cliente</th>
           <th>Producto</th>
           <th>Cantidad</th>
+          <th>Logo Enfrente</th>
+          <th>Logo Atrás</th>
 
       <tbody id="data">
       </tbody>
@@ -47,7 +51,9 @@
                                       temp += "<tr>";
                                       temp += "<td>"+u.cliente+"</td>";
                                       temp += "<td>"+u.producto+"</td>";
-                                      temp += "<td>"+u.cantidad+"</td></tr>";
+                                      temp += "<td>"+u.cantidad+"</td>";
+                                      temp += "<td>"+u.logoEnfrente+"</td>";
+                                      temp += "<td>"+u.logoAtras+"</td></tr>";
                                     })
                                     console.log(temp)
                                     document.getElementById("data").innerHTML = temp;
