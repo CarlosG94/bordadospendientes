@@ -16,7 +16,7 @@
 
      <div class="jumbotron">
       <div class="container">
-        <h3>Bordados Pendientes – @weartitofficial_</h3>
+        <h3>Bordados Pendientes – @wearitofficial_</h3>
         <img src="https://cdn.shopify.com/s/files/1/2956/5414/files/16c6991e5fe5f1999ff6c35af3f44424_ad091455-6e57-4009-8d95-cbb35d2ef76a_135x.png?v=1586562767">
       </div> 
     </div> 
@@ -26,6 +26,7 @@
     <table class="table table-stripped">
       <thread>
         <tr>
+          <th>Folio</th>
           <th>Cliente</th>
           <th>Producto</th>
           <th>Talla</th>
@@ -51,6 +52,7 @@
                                     data['bordadosPendientes'].forEach((u)=>{
                                       console.log(u);
                                       temp += "<tr>";
+                                      temp += "<td>"+u.folio+"</td>";
                                       temp += "<td>"+u.cliente+"</td>";
                                       temp += "<td>"+u.producto+"</td>";
                                       temp += "<td>"+u.talla+"</td>";
