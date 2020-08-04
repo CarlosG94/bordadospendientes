@@ -33,6 +33,7 @@
           <th>Cantidad</th>
           <th>Logo Enfrente</th>
           <th>Logo Atrás</th>
+          <th>/500</th>
           <th>¿Listo para bordar?</th>
 
       <tbody id="data">
@@ -44,9 +45,9 @@
                     res=>{
                         res.json().then(
                               data=>{
-                                  console.log(data);
-                                  console.log(data['bordadosPendientes']);
-                                  console.log(typeof(data));
+                                  // console.log(data);
+                                  // console.log(data['bordadosPendientes']);
+                                  // console.log(typeof(data));
                                   if(data['bordadosPendientes'].length > 0) {
                                     var temp = "";
                                     data['bordadosPendientes'].forEach((u)=>{
@@ -59,9 +60,10 @@
                                       temp += "<td>"+u.cantidad+"</td>";
                                       temp += "<td>"+u.logoEnfrente+"</td>";
                                       temp += "<td>"+u.logoAtras+"</td>";
+                                      temp += "<td>"+u.fivehundred+"</td>";
                                       temp += "<td><img src="+u.pagado+" width='50'></td></tr>";
                                     })
-                                    console.log(temp)
+                                    //console.log(temp)
                                     document.getElementById("data").innerHTML = temp;
                                   }
                               }
